@@ -61,9 +61,9 @@ func main() {
 	sendTextToTelegramChat(-654213075, "Github Copilot makes coding fun")
 }
 
-func getPunchline(seed string) (string, error) {
+func dummyMethod(seed string) (string, error) {
 
-	fmt.Println("Summy method")
+	fmt.Println("Dummy method")
 
 	return string("hello world"), fmt.Errorf("Dummy Error")
 
@@ -98,7 +98,7 @@ func HandleTelegramHook(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var lyric, errRapLyric = getPunchline(sanitizeSeed)
+	var lyric, errRapLyric = dummyMethod(sanitizeSeed)
 
 	if errRapLyric != nil {
 		log.Printf("error getting punch line, %s", errRapLyric.Error())
